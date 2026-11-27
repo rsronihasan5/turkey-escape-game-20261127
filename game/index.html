@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giblet's Great Escape — a turkey escape game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #2b1a0e;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  #wrap { text-align: center; }
+  canvas {
+    display: block;
+    width: min(96vw, 1280px, 150vh);
+    height: auto;
+    aspect-ratio: 960 / 600;
+    background: #7fae4c;
+    border: 4px solid #8a5a2b;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #help {
+    color: #fff3d6;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+  #help b { color: #ffd23f; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="960" height="600"></canvas>
+  <div id="help">
+    <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>SHIFT</b> sprint &nbsp;·&nbsp; <b>SPACE</b> hide in hay &nbsp;·&nbsp;
+    <b>Q</b> decoy &nbsp;·&nbsp; <b>F</b> smoke &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute &nbsp;·&nbsp; mouse clicks the buttons
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
